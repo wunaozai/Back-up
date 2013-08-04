@@ -1,0 +1,5 @@
+host wunaozai
+    user git
+    hostname github.com
+    port 22
+    identityfile /root/.ssh/id_rsa
