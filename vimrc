@@ -241,7 +241,7 @@ let g:airline_right_sep = '◀'
 let g:airline_section_b='%{getcwd()}'
 "let g:airline_section_c=
 let g:airline_section_x=airline#section#create(['mode',' ','branch',' ','ffenc'])
-let g:airline_section_y='%{FileType}'
+"let g:airline_section_y='%{FileType}'
 let g:airline_section_z='%{strftime("%H:%M")}'
 "使用AirlineToggle打开 
 "AirlineTheme ... 来选择配色
