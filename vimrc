@@ -225,10 +225,12 @@ let g:multi_cursor_quit_key='<esc>'
 "============================================================
 "vim-airline 修改状态条的颜色等信息 其实
 Bundle 'bling/vim-airline'
-let g:airline_left_sep = '»'
+"let g:airline_left_sep = '»'
 let g:airline_left_sep = '▶'
-let g:airline_right_sep = '«'
+let g:airline_left_alt_sep = '>'
+"let g:airline_right_sep = '«'
 let g:airline_right_sep = '◀'
+let g:airline_right_alt_sep = '<'
 "let g:airline_symbols.linenr = '␊'
 "let g:airline_symbols.linenr = '␤'
 "let g:airline_symbols.linenr = '¶'
@@ -237,12 +239,21 @@ let g:airline_right_sep = '◀'
 "let g:airline_symbols.paste = 'Þ'
 "let g:airline_symbols.paste = '∥'
 "let g:airline_symbols.whitespace = 'Ξ'
+let g:airline_section_a=airline#section#create(['mode'])
+let g:airline_section_b=airline#section#create(['hunks'])
+let g:airline_section_c=airline#section#create(['%{getcwd()}','%f'])
+let g:airline_section_x=airline#section#create(['branch','ffenc'])
+let g:airline_section_y=airline#section#create(['','[TYPE:','filetype',']','[TIME:','%{strftime("%H:%M")}',']'])
+"let g:airline_section_z=airline#section#create()
 "let g:airline_section_a=
-let g:airline_section_b='%{getcwd()}'
+"let g:airline_section_b='%{getcwd()}'
 "let g:airline_section_c=
-let g:airline_section_x=airline#section#create(['mode',' ','branch',' ','ffenc'])
+"let g:airline_section_x=airline#section#create(['mode',' ','branch',' ','ffenc'])
+"
 "let g:airline_section_y='%{FileType}'
-let g:airline_section_z='%{strftime("%H:%M")}'
+
+"let g:airline_section_y='%a'
+"let g:airline_section_z='%{strftime("%H:%M")}'
 "使用AirlineToggle打开 
 "AirlineTheme ... 来选择配色
 
